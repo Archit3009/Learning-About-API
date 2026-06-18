@@ -1,7 +1,6 @@
 package com.learning.firsttimespring;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class firstapihelloapi {
@@ -13,5 +12,9 @@ public class firstapihelloapi {
 @GetMapping("/hello")
     public String hello(){
     return "Hello this is the first api designed by Archit Gupta";
+}
+@PostMapping("/hello")
+    public String posthello(@RequestBody String name){
+        return "HELLO" + name + "You are destined to live a really beautiful life with everything and everyone you want with you";
 }
 }
