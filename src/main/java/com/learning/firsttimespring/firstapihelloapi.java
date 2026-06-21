@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.*;
 public class firstapihelloapi {
 
     @GetMapping
-    public String hi(){
-        return "hi i am archit";
+    public HelloResponse hi(){
+//        return "hi i am archit";
+    return new HelloResponse("hi i am archit");
     }
 @GetMapping("/hello")
     public String hello(){
