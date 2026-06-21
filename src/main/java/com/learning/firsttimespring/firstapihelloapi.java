@@ -5,6 +5,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class firstapihelloapi {
 
+    @GetMapping("/welcome/{name}")
+    public HelloResponse hellopath(@PathVariable String name){
+        return new HelloResponse("Hi "+ name);
+    }
+
     @GetMapping
     public HelloResponse hi(){
 //        return "hi i am archit";
